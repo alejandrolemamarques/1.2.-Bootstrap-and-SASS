@@ -13738,6 +13738,12 @@ p {
   margin-top: 7rem;
 }
 
+@media (min-width: 768px) {
+  .mb-md-10 {
+    margin-bottom: 7rem;
+  }
+}
+
 #download-section {
   margin-top: 5rem;
 }
@@ -13799,6 +13805,21 @@ p {
   background-size: 15px 4px;
   background-position: center;
   background-repeat: repeat-x;
+}
+
+/* Accordion */
+.accordion .accordion-item {
+  border-left: 0;
+  border-right: 0;
+}
+
+.accordion .accordion-item .accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.accordion .accordion-item .accordion-button:not(.collapsed) {
+  background-color: white;
 }
 
 /*------------------------------------*\

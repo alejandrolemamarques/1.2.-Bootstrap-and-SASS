@@ -33,6 +33,12 @@ p {
     margin-top: 7rem;
 }
 
+.mb-md-10 {
+    @media (min-width: 768px) {
+        margin-bottom: 7rem;
+    }
+}
+
 #download-section {
     margin-top: 5rem;
 
@@ -97,6 +103,25 @@ p {
     background-size: 15px 4px;
     background-position: center;
     background-repeat: repeat-x;
+}
+
+/* Accordion */
+.accordion {
+    .accordion-item {
+        border-left: 0;
+        border-right: 0;
+        
+        .accordion-button {            
+            &:focus {
+                box-shadow: none;
+            }
+            
+            &:not(.collapsed) {
+                background-color: white;
+                
+            }
+        }
+    }
 }
 
 /*------------------------------------*\
