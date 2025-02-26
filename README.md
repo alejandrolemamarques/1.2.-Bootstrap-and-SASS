@@ -21,13 +21,23 @@ This project involves creating a responsive web page using Bootstrap and SASS. T
 ## 🛠️ Installation
 
 1. Clone this repository:
+
     ```sh
     git clone https://github.com/alejandrolemamarques/1.2.-Bootstrap-and-SASS.git
     ```
+
+    > **Note:** The repository name contains periods (.) which may cause issues with folder naming on some systems. You may need to rename the directory after cloning or specify a different directory name during cloning:
+    >
+    > ```sh
+    > git clone https://github.com/alejandrolemamarques/1.2.-Bootstrap-and-SASS.git my-directory
+    > ```
+
 2. Navigate to the project directory:
+
     ```sh
-    cd S1-2-Bootstrap-and-SASS
+    cd my-directory
     ```
+
 3. Install dependencies:
     ```sh
     npm install
