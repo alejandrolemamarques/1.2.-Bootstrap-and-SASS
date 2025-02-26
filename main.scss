@@ -83,6 +83,16 @@ p {
 
 .nav-link-footer {
     color: white;
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.nav-link-header {
+    color: black;
+    &:hover {
+        color: $secondary;
+    }
 }
 
 /* Cards */
@@ -115,6 +125,27 @@ p {
     &::placeholder {
         font-size: 0.8rem;
     }
+
+    .was-validated & {
+        &:invalid {
+            border-radius: 6px 6px 0 0;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.invalid-feedback {
+    color: white;
+    font-size: 0.7rem;
+    font-style: italic;
+    position: absolute;
+    background-color: $secondary;
+    padding: 0.25rem 0.5rem;
+    margin-top: 0;
+    border-radius: 0 0 4px 4px;
 }
 
 /* Accordion */
@@ -124,6 +155,10 @@ p {
         border-right: 0;
         
         .accordion-button {
+            &:hover {
+                color: $secondary;
+            }
+            
             &:focus {
                 box-shadow: none;
             }
@@ -143,7 +178,13 @@ p {
     @include button-variant(
         $background: $primary,
         $border: $primary,
-        $color: white
+        $color: white,
+        $hover-background: white,
+        $hover-border: $primary,
+        $hover-color: $primary,
+        $active-background: #f7f7f7,
+        $active-border: $primary,
+        $active-color: $primary
     );
 }
 
@@ -151,7 +192,13 @@ p {
     @include button-variant(
         $background: $secondary,
         $border: $secondary,
-        $color: white
+        $color: white,
+        $hover-background: $white,
+        $hover-border: $secondary,
+        $hover-color: $secondary,
+        $active-background: #f7f7f7,
+        $active-border: $secondary,
+        $active-color: $secondary
     );
 }
 
@@ -159,7 +206,13 @@ p {
     @include button-variant(
         $background: #f7f7f7,
         $border: #f7f7f7,
-        $color: black
+        $color: black,
+        $hover-background: white,
+        $hover-border: black,
+        $hover-color: black,
+        $active-background: #f7f7f7,
+        $active-border: black,
+        $active-color: black
     );
 }
 
@@ -167,7 +220,13 @@ p {
     @include button-variant(
         $background: $secondary,
         $border: $secondary,
-        $color: white
+        $color: white,
+        $hover-background: white,
+        $hover-border: $secondary,
+        $hover-color: $secondary,
+        $active-background: rgb(240, 240, 240),
+        $active-border: $secondary,
+        $active-color: $secondary
     );
 }
 
@@ -237,4 +296,11 @@ p {
 \*------------------------------------*/
 .navbar-purple {
     background-color: #242946;
+}
+
+.footer-logo img {
+    &:hover {
+        filter: invert(40%) sepia(100%) saturate(7481%) hue-rotate(352deg)
+            brightness(200%);
+    }
 }
