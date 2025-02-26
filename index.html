@@ -641,5 +641,146 @@
                 </div>
             </div>
         </main>
+
+        <!-- Footer Section (Exercise 5)-->
+        <footer>
+            <div class="container-fluid">
+                <!-- Footer Main -->
+                <div class="row py-5 bg-primary">
+                    <div class="col-8 col-md-6 col-lg-5 col-xl-4 mx-auto">
+                        <!-- Footer Text -->
+                        <div class="row">
+                            <div
+                                class="col d-flex flex-column align-items-center text-center"
+                            >
+                                <div class="p text-white mb-5">
+                                    35.000+ ALREADY JOINED
+                                </div>
+                                <div class="h2 text-white mb-5">
+                                    Stay up-to-date with what we're doing
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Form -->
+                        <div class="row mb-3">
+                            <div class="col position-relative">
+                                <form
+                                    class="d-flex flex-column flex-md-row justify-content-evenly align-items-md-start needs-validation"
+                                    novalidate
+                                >
+                                    <div class="position-relative">
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            id="inputEmail1"
+                                            placeholder="Enter your email address"
+                                            required
+                                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                        />
+                                        <div
+                                            class="invalid-feedback text-start"
+                                        >
+                                            Whoops, make sure it's an email
+                                        </div>
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        class="btn btn-contact-us mt-5 mt-md-0"
+                                    >
+                                        Contact Us
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Navbar -->
+                <div class="row">
+                    <nav class="navbar navbar-purple py-5">
+                        <div class="container col-10">
+                            <div
+                                class="d-flex flex-column flex-md-row align-items-center justify-content-between w-100"
+                            >
+                                <!-- Footer Logo -->
+                                <a class="navbar-brand mb-4 mb-md-0" href="#">
+                                    <img
+                                        src="./Imagenes/logo-bookmark.svg"
+                                        alt="Bookmark Logo"
+                                    />
+                                </a>
+                                <!-- Footer Navbar Links -->
+                                <ul
+                                    class="navbar-nav mb-4 mb-md-0 flex-column flex-md-row align-items-center me-md-auto"
+                                >
+                                    <li class="nav-item me-md-4 mb-3 mb-md-0">
+                                        <a
+                                            class="nav-link nav-link-footer"
+                                            href="#"
+                                            >FEATURES</a
+                                        >
+                                    </li>
+                                    <li class="nav-item me-md-4 mb-3 mb-md-0">
+                                        <a
+                                            class="nav-link nav-link-footer"
+                                            href="#"
+                                            >PRICING</a
+                                        >
+                                    </li>
+                                    <li class="nav-item mb-3 mb-md-0">
+                                        <a
+                                            class="nav-link nav-link-footer"
+                                            href="#"
+                                            >CONTACT</a
+                                        >
+                                    </li>
+                                </ul>
+                                <!-- Footer Social Icons -->
+                                <div class="social-icons">
+                                    <a href="#" class="me-4 footer-logo">
+                                        <img
+                                            src="./Imagenes/icon-facebook.svg"
+                                            alt="Facebook"
+                                        />
+                                    </a>
+                                    <a href="#" class="footer-logo">
+                                        <img
+                                            src="./Imagenes/icon-twitter.svg"
+                                            alt="Twitter"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Form validation
+            (() => {
+                "use strict";
+
+                // Fetch all forms we want to apply validation styles to
+                const forms = document.querySelectorAll(".needs-validation");
+
+                // Loop over them and prevent submission
+                Array.from(forms).forEach((form) => {
+                    form.addEventListener(
+                        "submit",
+                        (event) => {
+                            if (!form.checkValidity()) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+
+                            // adding this classes to the form after a form submition (regardless of whether the validation was successful or not), which makes the validation styles appear
+                            form.classList.add("was-validated");
+                        },
+                        false
+                    );
+                });
+            })();
+        </script>
     </body>
 </html>

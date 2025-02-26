@@ -11,6 +11,7 @@ $font-family-base: "Montserrat", sans-serif;
 // Components
 $btn-border-width: 2px;
 $card-border-width: 0;
+$accordion-icon-active-color: $secondary;
 
 // Import Bootstrap
 @import "./node_modules/bootstrap/scss/bootstrap";
@@ -80,6 +81,10 @@ p {
     }
 }
 
+.nav-link-footer {
+    color: white;
+}
+
 /* Cards */
 .card-title-text {
     font-size: 1.2rem;
@@ -105,13 +110,20 @@ p {
     background-repeat: repeat-x;
 }
 
+/* Forms */
+.form-control {
+    &::placeholder {
+        font-size: 0.8rem;
+    }
+}
+
 /* Accordion */
 .accordion {
     .accordion-item {
         border-left: 0;
         border-right: 0;
         
-        .accordion-button {            
+        .accordion-button {
             &:focus {
                 box-shadow: none;
             }
@@ -148,6 +160,14 @@ p {
         $background: #f7f7f7,
         $border: #f7f7f7,
         $color: black
+    );
+}
+
+.btn-contact-us {
+    @include button-variant(
+        $background: $secondary,
+        $border: $secondary,
+        $color: white
     );
 }
 
@@ -210,4 +230,11 @@ p {
         position: relative;
         z-index: 2;
     }
+}
+
+/*------------------------------------*\
+  # UTILITIES
+\*------------------------------------*/
+.navbar-purple {
+    background-color: #242946;
 }
