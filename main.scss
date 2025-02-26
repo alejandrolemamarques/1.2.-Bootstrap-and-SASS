@@ -26,6 +26,40 @@ p {
 }
 
 /*------------------------------------*\
+  # LAYOUT & SPACING
+\*------------------------------------*/
+.mt-10 {
+    margin-top: 7rem;
+}
+
+/*------------------------------------*\
+  # COMPONENTS
+\*------------------------------------*/
+
+/* Navigation */
+.nav-underline {
+    border-bottom: 1px solid #cbcbcb;
+
+    .nav-link {
+        color: #777777;
+
+        &:hover {
+            color: $secondary;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        &.active {
+            border-bottom: 4px solid $secondary;
+        }
+
+        &:focus {
+            border-bottom: 2px solid transparent;
+        }
+    }
+}
+
+/*------------------------------------*\
   # BUTTONS
 \*------------------------------------*/
 .btn-primary {
@@ -74,6 +108,36 @@ p {
             width: 70%;
             height: 20vw;
             border-radius: 200px 0 0 200px;
+        }
+    }
+
+    img {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.features-image-decoration {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-radius: 0px 100px 100px 0px;
+        background-color: $primary;
+        z-index: -1;
+        bottom: -60px;
+        left: 0;
+        width: 70%;
+        height: 40vw;
+
+        @media (min-width: 768px) {
+            top: 50%;
+            left: 0;
+            width: 70%;
+            height: 20vw;
+            border-radius: 0px 200px 200px 0px;
         }
     }
 

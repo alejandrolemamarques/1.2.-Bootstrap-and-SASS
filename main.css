@@ -13732,6 +13732,39 @@ p {
 }
 
 /*------------------------------------*\
+  # LAYOUT & SPACING
+\*------------------------------------*/
+.mt-10 {
+  margin-top: 7rem;
+}
+
+/*------------------------------------*\
+  # COMPONENTS
+\*------------------------------------*/
+/* Navigation */
+.nav-underline {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.nav-underline .nav-link {
+  color: #777777;
+}
+
+.nav-underline .nav-link:hover {
+  color: #fa5959;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.nav-underline .nav-link.active {
+  border-bottom: 4px solid #fa5959;
+}
+
+.nav-underline .nav-link:focus {
+  border-bottom: 2px solid transparent;
+}
+
+/*------------------------------------*\
   # BUTTONS
 \*------------------------------------*/
 .btn-primary {
@@ -13814,6 +13847,38 @@ p {
 }
 
 .hero-image-decoration img {
+  position: relative;
+  z-index: 2;
+}
+
+.features-image-decoration {
+  position: relative;
+  z-index: 1;
+}
+
+.features-image-decoration::after {
+  content: "";
+  position: absolute;
+  border-radius: 0px 100px 100px 0px;
+  background-color: #5265e1;
+  z-index: -1;
+  bottom: -60px;
+  left: 0;
+  width: 70%;
+  height: 40vw;
+}
+
+@media (min-width: 768px) {
+  .features-image-decoration::after {
+    top: 50%;
+    left: 0;
+    width: 70%;
+    height: 20vw;
+    border-radius: 0px 200px 200px 0px;
+  }
+}
+
+.features-image-decoration img {
   position: relative;
   z-index: 2;
 }
