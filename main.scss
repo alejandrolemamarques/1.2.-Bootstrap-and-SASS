@@ -1,0 +1,84 @@
+/*------------------------------------*\
+  # VARIABLES
+\*------------------------------------*/
+// Colors
+$primary: #5265e1;
+$secondary: #fa5959;
+
+// Typography
+$font-family-base: "Montserrat", sans-serif;
+
+// Components
+$btn-border-width: 2px;
+
+// Import Bootstrap
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/*------------------------------------*\
+  # TYPOGRAPHY
+\*------------------------------------*/
+p {
+    font-size: 0.9rem;
+}
+
+.fs-small {
+    font-size: 0.8rem;
+}
+
+/*------------------------------------*\
+  # BUTTONS
+\*------------------------------------*/
+.btn-primary {
+    @include button-variant(
+        $background: $primary,
+        $border: $primary,
+        $color: white
+    );
+}
+
+.btn-secondary {
+    @include button-variant(
+        $background: $secondary,
+        $border: $secondary,
+        $color: white
+    );
+}
+
+.btn-light {
+    @include button-variant(
+        $background: #f7f7f7,
+        $border: #f7f7f7,
+        $color: black
+    );
+}
+
+/*------------------------------------*\
+  # DECORATIVE ELEMENTS
+\*------------------------------------*/
+.hero-image-decoration {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        width: 30%;
+        height: 40vw;
+        border-radius: 100px 0 0 100px;
+        background-color: $primary;
+        z-index: -1;
+
+        @media (min-width: 768px) {
+            width: 70%;
+            height: 20vw;
+            border-radius: 200px 0 0 200px;
+        }
+    }
+
+    img {
+        position: relative;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "s1-2--bootstrap-and-sass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandrolemamarques/S1.2.-Bootstrap-SASS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandrolemamarques/S1.2.-Bootstrap-SASS/issues"
+  },
+  "homepage": "https://github.com/alejandrolemamarques/S1.2.-Bootstrap-SASS#readme",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "sass": "^1.85.0"
+  }
+}
