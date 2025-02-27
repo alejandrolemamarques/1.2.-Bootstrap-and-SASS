@@ -40,29 +40,108 @@
                             alt="Bookmark Logo"
                         />
                     </a>
-                    <!-- Navbar Toggler -->
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <!-- Navbar Links -->
-                    <div
-                        class="collapse navbar-collapse"
-                        id="navbarSupportedContent"
-                    >
+                    <!--Navigation mobile -->
+                    <div class="d-lg-none">
+                        <!--Toggler button -->
+                        <button
+                            class="navbar-toggler"
+                            data-bs-toggle="modal"
+                            data-bs-target="#nav-modal"
+                        >
+                            <div class="navbar-toggler-icon"></div>
+                        </button>
+
+                        <!--Modal -->
+                        <div class="modal fade" id="nav-modal">
+                            <div class="modal-dialog modal-fullscreen">
+                                <div class="modal-content modal-bg-primary">
+                                    <!--Modal header -->
+                                    <div
+                                        class="modal-header d-flex justify-content-between"
+                                    >
+                                        <a href="#">
+                                            <img
+                                                src="./Imagenes/logo-bookmark-modal.svg"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <button
+                                            class="bg-dark"
+                                            data-bs-dismiss="modal"
+                                            data-bs-target="#modal"
+                                        >
+                                            <img
+                                                src="./Imagenes/icon-close.svg"
+                                                alt=""
+                                            />
+                                        </button>
+                                    </div>
+
+                                    <!--Modal body -->
+                                    <div class="modal-body">
+                                        <ul
+                                            class="navbar-nav d-flex flex-column align-items-center"
+                                        >
+                                            <li class="nav-item">
+                                                <a
+                                                    href=""
+                                                    class="nav-link nav-link-header"
+                                                    aria-current="page"
+                                                    >FEATURES</a
+                                                >
+                                            </li>
+                                            <li class="nav-item">
+                                                <a
+                                                    href=""
+                                                    class="nav-link nav-link-header"
+                                                    >PRICING</a
+                                                >
+                                            </li>
+                                            <li class="nav-item">
+                                                <a
+                                                    href=""
+                                                    class="nav-link nav-link-header"
+                                                    >CONTACT</a
+                                                >
+                                            </li>
+                                            <li class="nav-item">
+                                                <a
+                                                    href=""
+                                                    class="btn btn-outline-light"
+                                                    >LOGIN</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!--Modal footer -->
+                                    <div
+                                        class="modal-footer d-flex justify-content-center"
+                                    >
+                                        <img
+                                            class="me-5 icon-socials"
+                                            src="./Imagenes/icon-facebook.svg"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="icon-socials"
+                                            src="./Imagenes/icon-twitter.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navbar Links above md-->
+                    <div class="d-none d-lg-block" id="navbarSupportedContent">
                         <ul
                             class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase fw-bold align-items-center"
                         >
                             <li class="nav-item me-lg-4">
                                 <a
-                                    class="nav-link nav-text-small py-2 nav-link-header"
+                                    class="nav-link py-2 nav-link-header"
                                     aria-current="page"
                                     href="#"
                                     >Features</a
@@ -70,14 +149,14 @@
                             </li>
                             <li class="nav-item me-lg-4">
                                 <a
-                                    class="nav-link nav-text-small py-2 nav-link-header"
+                                    class="nav-link py-2 nav-link-header"
                                     href="#"
                                     >Pricing</a
                                 >
                             </li>
                             <li class="nav-item me-lg-5">
                                 <a
-                                    class="nav-link nav-text-small py-2 nav-link-header"
+                                    class="nav-link py-2 nav-link-header"
                                     href="#"
                                     >Contact</a
                                 >
@@ -663,7 +742,7 @@
                 <div class="row">
                     <div class="col-4 mx-auto text-center">
                         <button
-                            class="btn btn-primary"
+                            class="btn btn-primary px-4 py-3"
                             aria-label="Get more information"
                         >
                             More info
@@ -782,6 +861,7 @@
                                         aria-label="Visit our Facebook page"
                                     >
                                         <img
+                                            class="icon-socials"
                                             src="./Imagenes/icon-facebook.svg"
                                             alt="Facebook"
                                         />
@@ -792,6 +872,7 @@
                                         aria-label="Visit our Twitter page"
                                     >
                                         <img
+                                            class="icon-socials"
                                             src="./Imagenes/icon-twitter.svg"
                                             alt="Twitter"
                                         />
@@ -828,6 +909,23 @@
                         false
                     );
                 });
+            })();
+
+            // Handle modal on screen resize
+            (() => {
+                const navModal = document.getElementById("nav-modal");
+                const bsModal = new bootstrap.Modal(navModal);
+
+                const handleResize = () => {
+                    if (
+                        window.innerWidth >= 992 &&
+                        navModal.classList.contains("show")
+                    ) {
+                        bsModal.hide();
+                    }
+                };
+
+                window.addEventListener("resize", handleResize);
             })();
         </script>
     </body>

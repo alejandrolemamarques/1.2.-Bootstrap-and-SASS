@@ -89,9 +89,74 @@ p {
 }
 
 .nav-link-header {
-    color: black;
+    color: white;
+
     &:hover {
         color: $secondary;
+    }
+
+    @media (min-width: 992px) {
+        color: black;
+    }
+}
+
+/* Modal */
+
+.modal-content.modal-bg-primary {
+    background-color: rgba(shade-color($primary, 75%), 0.75);
+    .modal-header {
+        border: none;
+        padding: 2rem;
+
+        button {
+            background: transparent;
+            border: none;
+            padding: 0;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 2rem;
+
+        .nav-item {
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+            &:last-child {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-link {
+                padding: 1.5rem 0;
+                text-align: center;
+                font-size: 1.25rem;
+                letter-spacing: 2px;
+            }
+        }
+
+        .btn {
+            border: 2px solid white;
+            width: 100%;
+            padding: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+    }
+
+    .modal-footer {
+        border: none;
+        padding: 2rem;
+        margin-top: 2rem;
+
+        .icon-socials {
+            width: 1.5rem;
+            height: 1.5rem;
+
+        }
     }
 }
 
@@ -294,7 +359,9 @@ p {
     background-color: #242946;
 }
 
-.footer-logo img {
+.icon-socials {
+    cursor: pointer;
+
     &:hover {
         filter: invert(40%) sepia(100%) saturate(7481%) hue-rotate(352deg)
             brightness(200%);

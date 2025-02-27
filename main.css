@@ -13795,11 +13795,77 @@ p {
 }
 
 .nav-link-header {
-  color: black;
+  color: white;
 }
 
 .nav-link-header:hover {
   color: #fa5959;
+}
+
+@media (min-width: 992px) {
+  .nav-link-header {
+    color: black;
+  }
+}
+
+/* Modal */
+.modal-content.modal-bg-primary {
+  background-color: rgba(21, 25, 56, 0.75);
+}
+
+.modal-content.modal-bg-primary .modal-header {
+  border: none;
+  padding: 2rem;
+}
+
+.modal-content.modal-bg-primary .modal-header button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.modal-content.modal-bg-primary .modal-header button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal-content.modal-bg-primary .modal-body {
+  padding: 2rem;
+}
+
+.modal-content.modal-bg-primary .modal-body .nav-item {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-content.modal-bg-primary .modal-body .nav-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-content.modal-bg-primary .modal-body .nav-item .nav-link {
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+
+.modal-content.modal-bg-primary .modal-body .btn {
+  border: 2px solid white;
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.modal-content.modal-bg-primary .modal-footer {
+  border: none;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.modal-content.modal-bg-primary .modal-footer .icon-socials {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 /* Cards */
@@ -14020,7 +14086,11 @@ p {
   background-color: #242946;
 }
 
-.footer-logo img:hover {
+.icon-socials {
+  cursor: pointer;
+}
+
+.icon-socials:hover {
   -webkit-filter: invert(40%) sepia(100%) saturate(7481%) hue-rotate(352deg) brightness(200%);
           filter: invert(40%) sepia(100%) saturate(7481%) hue-rotate(352deg) brightness(200%);
 }
