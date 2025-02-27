@@ -14094,4 +14094,15 @@ p {
   -webkit-filter: invert(40%) sepia(100%) saturate(7481%) hue-rotate(352deg) brightness(200%);
           filter: invert(40%) sepia(100%) saturate(7481%) hue-rotate(352deg) brightness(200%);
 }
+
+/*------------------------------------*\
+  # FOCUS STATES
+\*------------------------------------*/
+.nav-link:focus-visible,
+.btn:focus-visible,
+.accordion-button:focus-visible,
+.navbar-toggler:focus-visible {
+  outline: 2px solid #5265e1;
+  outline-offset: 2px;
+}
 /*# sourceMappingURL=main.css.map */
