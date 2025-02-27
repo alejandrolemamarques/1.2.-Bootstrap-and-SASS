@@ -34,7 +34,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container px-4 py-lg-5 py-3">
                     <!-- Navbar Logo -->
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="#" aria-label="Bookmark home">
                         <img
                             src="./Imagenes/logo-bookmark.svg"
                             alt="Bookmark Logo"
@@ -118,12 +118,14 @@
                             <button
                                 type="button"
                                 class="btn btn-primary px-md-3 py-md-3 me-sm-2 shadow-sm fs-small"
+                                aria-label="Install Chrome extension"
                             >
                                 Get it on Chrome
                             </button>
                             <button
                                 type="button"
                                 class="btn btn-light px-md-3 py-md-3 shadow-sm fs-small"
+                                aria-label="Install Firefox extension"
                             >
                                 Get it on Firefox
                             </button>
@@ -178,6 +180,7 @@
                                             role="tab"
                                             aria-controls="simple-bookmarking"
                                             aria-selected="true"
+                                            aria-label="Simple Bookmarking tab"
                                             >Simple Bookmarking</a
                                         >
                                     </li>
@@ -190,6 +193,7 @@
                                             role="tab"
                                             aria-controls="speedy-searching"
                                             aria-selected="false"
+                                            aria-label="Speedy Searching tab"
                                             >Speedy Searching</a
                                         >
                                     </li>
@@ -202,6 +206,7 @@
                                             role="tab"
                                             aria-controls="easy-sharing"
                                             aria-selected="false"
+                                            aria-label="Easy Sharing tab"
                                             >Easy Sharing</a
                                         >
                                     </li>
@@ -261,6 +266,7 @@
                                                 >
                                                     <button
                                                         class="btn btn-primary px-4 py-3 mb-3 mb-sm-0 me-sm-2 shadow-sm"
+                                                        aria-label="Get more information"
                                                     >
                                                         More info
                                                     </button>
@@ -316,6 +322,7 @@
                                                 >
                                                     <button
                                                         class="btn btn-primary px-4 py-3 mb-3 mb-sm-0 me-sm-2 shadow-sm"
+                                                        aria-label="Get more information"
                                                     >
                                                         More info
                                                     </button>
@@ -369,6 +376,7 @@
                                                 >
                                                     <button
                                                         class="btn btn-primary px-4 py-3 mb-3 mb-sm-0 me-sm-2 shadow-sm"
+                                                        aria-label="Get more information"
                                                     >
                                                         More info
                                                     </button>
@@ -416,7 +424,10 @@
                                 </h3>
                                 <p class="card-text">Minimum version 62</p>
                                 <div class="card-dots"></div>
-                                <a href="#" class="btn btn-primary card-button"
+                                <a
+                                    href="#"
+                                    class="btn btn-primary card-button"
+                                    aria-label="Add and install Chrome extension"
                                     >Add & Install Extension</a
                                 >
                             </div>
@@ -438,7 +449,10 @@
                                 </h3>
                                 <p class="card-text">Minimum version 55</p>
                                 <div class="card-dots"></div>
-                                <a href="#" class="btn btn-primary card-button"
+                                <a
+                                    href="#"
+                                    class="btn btn-primary card-button"
+                                    aria-label="Add and install Firefox extension"
                                     >Add & Install Extension</a
                                 >
                             </div>
@@ -460,7 +474,10 @@
                                 </h3>
                                 <p class="card-text">Minimum version 46</p>
                                 <div class="card-dots"></div>
-                                <a href="#" class="btn btn-primary card-button"
+                                <a
+                                    href="#"
+                                    class="btn btn-primary card-button"
+                                    aria-label="Add and install Opera extension"
                                     >Add & Install Extension</a
                                 >
                             </div>
@@ -645,7 +662,12 @@
                 </div>
                 <div class="row">
                     <div class="col-4 mx-auto text-center">
-                        <button class="btn btn-primary">More info</button>
+                        <button
+                            class="btn btn-primary"
+                            aria-label="Get more information"
+                        >
+                            More info
+                        </button>
                     </div>
                 </div>
             </div>
@@ -685,9 +707,13 @@
                                             placeholder="Enter your email address"
                                             required
                                             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                            aria-label="Email subscription input"
+                                            aria-describedby="email-error-message"
                                         />
                                         <div
                                             class="invalid-feedback text-start"
+                                            id="email-error-message"
+                                            role="alert"
                                         >
                                             Whoops, make sure it's an email
                                         </div>
@@ -695,6 +721,7 @@
                                     <button
                                         type="submit"
                                         class="btn btn-contact-us mt-5 mt-md-0"
+                                        aria-label="Submit email subscription"
                                     >
                                         Contact Us
                                     </button>
@@ -711,7 +738,11 @@
                                 class="d-flex flex-column flex-md-row align-items-center justify-content-between w-100"
                             >
                                 <!-- Footer Logo -->
-                                <a class="navbar-brand mb-4 mb-md-0" href="#">
+                                <a
+                                    class="navbar-brand mb-4 mb-md-0"
+                                    href="#"
+                                    aria-label="Bookmark home"
+                                >
                                     <img
                                         src="./Imagenes/logo-bookmark.svg"
                                         alt="Bookmark Logo"
@@ -745,13 +776,21 @@
                                 </ul>
                                 <!-- Footer Social Icons -->
                                 <div class="social-icons">
-                                    <a href="#" class="me-4 footer-logo">
+                                    <a
+                                        href="#"
+                                        class="me-4 footer-logo"
+                                        aria-label="Visit our Facebook page"
+                                    >
                                         <img
                                             src="./Imagenes/icon-facebook.svg"
                                             alt="Facebook"
                                         />
                                     </a>
-                                    <a href="#" class="footer-logo">
+                                    <a
+                                        href="#"
+                                        class="footer-logo"
+                                        aria-label="Visit our Twitter page"
+                                    >
                                         <img
                                             src="./Imagenes/icon-twitter.svg"
                                             alt="Twitter"
