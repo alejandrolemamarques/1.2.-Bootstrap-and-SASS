@@ -10,7 +10,7 @@ This project involves creating a responsive web page using Bootstrap and SASS. T
 -   CSS3
 -   Bootstrap 5
 -   SASS/SCSS
--   JavaScript (for form validation)
+-   JavaScript (for form validation and modal handling)
 
 ## 📋 Requirements
 
@@ -39,9 +39,11 @@ This project involves creating a responsive web page using Bootstrap and SASS. T
     ```
 
 3. Install dependencies:
+
     ```sh
     npm install
     ```
+
 4. If using VS Code, install the "Live Sass Compiler" extension:
     - Open VS Code
     - Go to Extensions (Ctrl+Shift+X)
@@ -93,12 +95,20 @@ The project is a static website that can be deployed to any web hosting service:
 ## 📱 Features
 
 -   Fully responsive design using Bootstrap's grid system
--   Custom accordion component
--   Form validation
--   Custom button styling
--   Decorative elements with CSS
--   Navigation with tabs
--   Mobile-first approach
+-   Interactive components:
+    -   Mobile-friendly navigation with modal menu
+    -   Feature tabs with custom styling
+    -   Custom accordion for FAQ section
+    -   Browser extension cards with decorative elements
+-   Form validation with custom styling and error messages
+-   Custom button styling with hover and focus states
+-   Decorative elements using CSS pseudo-elements
+-   Accessibility features:
+    -   ARIA labels for interactive elements
+    -   Semantic HTML structure
+    -   Focus states for keyboard navigation
+-   Social media integration in footer
+-   Custom color scheme using SASS variables
 
 ## 🎨 Design Approach
 
@@ -107,7 +117,12 @@ The SCSS is organized into logical sections:
 -   Variables (colors, typography, component overrides)
 -   Typography styles
 -   Layout & Spacing
--   Components (Navigation, Cards, Forms, Accordion)
+-   Components
+    -   Navigation
+    -   Modal
+    -   Cards
+    -   Forms
+    -   Accordion
 -   Buttons
 -   Decorative Elements
 -   Utilities
