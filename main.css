@@ -13731,6 +13731,10 @@ p {
   font-size: 0.8rem;
 }
 
+.text-grey {
+  color: #989898;
+}
+
 /*------------------------------------*\
   # LAYOUT & SPACING
 \*------------------------------------*/
@@ -13928,6 +13932,17 @@ p {
 .accordion .accordion-item {
   border-left: 0;
   border-right: 0;
+}
+
+.accordion .accordion-item .accordion-button::after {
+  position: absolute;
+  height: 15px;
+  width: 20px;
+  right: 0;
+}
+
+.accordion .accordion-item .accordion-button.collapsed::after {
+  background-image: url("./Imagenes/icon-arrow.svg");
 }
 
 .accordion .accordion-item .accordion-button:hover {

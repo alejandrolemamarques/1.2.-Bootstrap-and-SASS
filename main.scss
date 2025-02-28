@@ -27,6 +27,9 @@ p {
     font-size: 0.8rem;
 }
 
+.text-grey {
+    color: #989898;
+}
 /*------------------------------------*\
   # LAYOUT & SPACING
 \*------------------------------------*/
@@ -216,6 +219,18 @@ p {
         border-right: 0;
 
         .accordion-button {
+            &::after {
+                position: absolute;
+                height: 15px;
+                width: 20px;
+                right: 0;
+            }
+            &.collapsed {
+                &::after {
+                    background-image: url("./Imagenes/icon-arrow.svg");
+                }
+            }
+
             &:hover {
                 color: $secondary;
             }
